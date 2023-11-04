@@ -6,43 +6,32 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "shop")
-@Getter
-@Setter
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Sh {
+public class Shop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Integer id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "contact_shop", referencedColumnName = "id")
-    private Contact_shop contact_shop;
-    //contancy_shop_id
+    private ContactShop contact_shop;
 
-    @Column(name = "number", nullable = false)
     private int number;
 
-    @Column(name ="email", nullable = false)
     private String email;
 
     @Column(name = "tg_chat", nullable = false)
-    private String tg_chat;
+    private String tgChat;
 
     @Column(name = "tg_channel", nullable = false)
-    private String tg_channel;
+    private String tgChannel;
 
     @Column(name = "whatsapp", nullable = false)
     private int whatsapp;
 /*
-    @Column(name = "work_schedule", nullable = false)
-    private work_schedule
-
+    @Column(name = "workSchedule", nullable = false)
+    private workSchedul ;
  */
-
-
-
-
 }

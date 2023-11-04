@@ -6,19 +6,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "contact_shop")
-@Getter
-@Setter
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Contact_shop {
+public class ContactShop {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    private int id;
 
     @OneToOne(mappedBy = "contact_shop")
-    private Sh shop;
-
-
+    private Shop shop;
 }

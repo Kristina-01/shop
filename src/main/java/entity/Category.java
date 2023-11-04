@@ -11,31 +11,24 @@ import java.util.Set;
 
 @Entity
 @Table(name = "category")
-@Getter
-@Setter
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    private int id;
 
-    @Column(name="nested_categories_id")
-    private Integer nested_categories_id;
-
-    @Column(name="name", length = 100, nullable = false, unique = true)
     private String name;
 
-    @Column(name = "count_product", nullable = false)
-    private int count_poduct;
+    @Column(name="nested_categories_id")
+    private int nestedCategoriesId;
 
-    @Column(name = "count_nested_categories", nullable = false)
-    private int count_nested_categories;
+    @Column(name = "count_product")
+    private int countProduct;
 
-   // @OneToMany(mappedBy ="category")
-    //private List<CategoryAndProduct> cAp= new ArrayList<>();
+    @Column(name = "count_nested_categories")
+    private int countNestedCategories;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(

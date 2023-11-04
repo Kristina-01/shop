@@ -6,17 +6,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "characteristica")
-@Getter
-@Setter
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Characteristica {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Integer id;
-
-    //что-то еще
-
+    private int id;
 }

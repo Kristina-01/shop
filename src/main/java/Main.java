@@ -11,8 +11,8 @@ public class Main {
         Session session = sessionFactory.openSession();
         System.out.println(session);
 
-        Sh sh1 = new Sh();
-        Contact_shop cs = new Contact_shop();
+        Shop sh1 = new Shop();
+        ContactShop cs = new ContactShop();
         Category category = new Category();
         Characteristica characteristica = new Characteristica();
         Gallery g = new Gallery();

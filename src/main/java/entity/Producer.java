@@ -6,16 +6,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "producer")
-@Getter
-@Setter
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Producer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Integer id;
-
-
+    private int id;
 }
